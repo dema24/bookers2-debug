@@ -1,2 +1,7 @@
-<h1>Chats#show</h1>
-<p>Find me in app/views/chats/show.html.erb</p>
+<h2><%= @user.name %>さんとのチャット</h2>
+
+<div class="message">
+  <%= render 'index', chats: @chats %>
+</div>
+
+<%= render 'form', chat: @chat %>
