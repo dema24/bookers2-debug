@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :chats
   has_many :rooms, through: :user_rooms
   
-  has_many :view_counts
+  has_many :view_counts, dependent: :destroy
 
   has_one_attached :profile_image
 
