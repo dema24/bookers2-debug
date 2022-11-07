@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @user = User.find(params[user_id])
+    @user = User.find(params[:user_id])
     @books = @user.books
     @created_at = params[:created_at]
     @search_book = @books.where(created_at: @created_at.to_date.all_day)

@@ -21,5 +21,7 @@ Rails.application.routes.draw do
   get "/search" => "searches#search"
 
   resources :chats, onry: [:show, :create]
+
+  resources :groups, only: [:index, :show, :edit, :new, :create, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
  end

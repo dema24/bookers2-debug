@@ -11,11 +11,6 @@
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
       <%= render "form", user: @user %>
-      <div class="search_result">
-        <% if @search_book.present? %>
-          <%= render "search", search_book: @search_book %>
-        <% end %>
-      </div>
       <%= render 'book_index', today_book: @today_book, yesterday_book: @yesterday_book, this_week_book: @this_week_book, last_week_book: @last_week_book, books: @books %>
       <%= render 'book_chart', books: @books %>
     </div>
